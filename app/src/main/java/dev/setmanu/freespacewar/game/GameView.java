@@ -1,4 +1,4 @@
-package dev.setmanu.spacewar.game;
+package dev.setmanu.freespacewar.game;
 
 import android.content.Context;
 import android.content.Intent;
@@ -15,13 +15,13 @@ import android.widget.Button;
 
 import java.util.ArrayList;
 
-import dev.setmanu.spacewar.R;
-import dev.setmanu.spacewar.game.sprites.CharacterSprite;
-import dev.setmanu.spacewar.game.sprites.EnemySprite;
-import dev.setmanu.spacewar.game.sprites.ExplosionSprite;
-import dev.setmanu.spacewar.game.sprites.LaserSprite;
-import dev.setmanu.spacewar.game.sprites.StarsSprite;
-import dev.setmanu.spacewar.gameOverScreen.GameOverScreen;
+import dev.setmanu.freespacewar.R;
+import dev.setmanu.freespacewar.game.sprites.CharacterSprite;
+import dev.setmanu.freespacewar.game.sprites.EnemySprite;
+import dev.setmanu.freespacewar.game.sprites.ExplosionSprite;
+import dev.setmanu.freespacewar.game.sprites.LaserSprite;
+import dev.setmanu.freespacewar.game.sprites.StarsSprite;
+import dev.setmanu.freespacewar.gameOverScreen.GameOverScreen;
 
 public final class GameView extends SurfaceView implements Runnable, View.OnClickListener {
 

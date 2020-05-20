@@ -1,4 +1,4 @@
-package dev.setmanu.spacewar.game;
+package dev.setmanu.freespacewar.game;
 
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
@@ -11,7 +11,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.FrameLayout;
 
-import dev.setmanu.spacewar.R;
+import dev.setmanu.freespacewar.R;
 
 
 public final class GameScreen extends Activity {

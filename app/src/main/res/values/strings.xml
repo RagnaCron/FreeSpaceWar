@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SpaceWar</string>
+    <string name="app_name">FreeSpaceWar</string>
     <string name="space_war">Space War</string>
     <string name="game_is_loading"><![CDATA[-> Game is loading <-]]></string>
     <string name="play_war"><![CDATA[<- Play War ->]]></string>

@@ -1,4 +1,4 @@
-package dev.setmanu.spacewar.game.sprites;
+package dev.setmanu.freespacewar.game.sprites;
 
 import android.graphics.Bitmap;
 import android.graphics.Rect;

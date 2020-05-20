@@ -1,4 +1,4 @@
-package dev.setmanu.spacewar.game;
+package dev.setmanu.freespacewar.game;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -6,7 +6,7 @@ import android.media.AudioAttributes;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
 
-import dev.setmanu.spacewar.R;
+import dev.setmanu.freespacewar.R;
 
 public final class GameSoundPool {
 

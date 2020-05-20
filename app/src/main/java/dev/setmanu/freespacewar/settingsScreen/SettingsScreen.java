@@ -1,4 +1,4 @@
-package dev.setmanu.spacewar.settingsScreen;
+package dev.setmanu.freespacewar.settingsScreen;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,8 +10,8 @@ import android.widget.CompoundButton;
 import android.widget.SeekBar;
 import android.widget.Switch;
 
-import dev.setmanu.spacewar.R;
-import dev.setmanu.spacewar.menuScreen.MenuScreen;
+import dev.setmanu.freespacewar.R;
+import dev.setmanu.freespacewar.menuScreen.MenuScreen;
 
 public class SettingsScreen extends Activity implements View.OnClickListener, CompoundButton.OnCheckedChangeListener {
 

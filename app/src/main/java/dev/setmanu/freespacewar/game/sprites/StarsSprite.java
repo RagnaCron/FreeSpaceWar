@@ -1,11 +1,11 @@
-package dev.setmanu.spacewar.game.sprites;
+package dev.setmanu.freespacewar.game.sprites;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;
 
 import java.util.Random;
 
-import dev.setmanu.spacewar.game.GameView;
+import dev.setmanu.freespacewar.game.GameView;
 
 public final class StarsSprite extends Sprite {
 

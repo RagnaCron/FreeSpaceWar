@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="dev.setmanu.spacewar">
+    package="dev.setmanu.freespacewar">
     <application
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +10,7 @@
         android:theme="@style/AppTheme">
         <uses-library android:name="org.apache.http.legacy" android:required="false"/>
         <activity
-            android:name=".loadScreen.LoadScreen"
+            android:name="dev.setmanu.freespacewar.loadScreen.LoadScreen"
             android:screenOrientation="fullSensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,21 +18,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".menuScreen.MenuScreen"
+            android:name="dev.setmanu.freespacewar.menuScreen.MenuScreen"
             android:screenOrientation="fullSensor" />
         <activity
-            android:name=".highScoreScreen.HighScoreScreen"
+            android:name="dev.setmanu.freespacewar.highScoreScreen.HighScoreScreen"
             android:screenOrientation="fullSensor" />
         <activity
-            android:name=".settingsScreen.SettingsScreen"
+            android:name="dev.setmanu.freespacewar.settingsScreen.SettingsScreen"
             android:screenOrientation="fullSensor">
 
         </activity>
         <activity
-            android:name=".game.GameScreen"
+            android:name="dev.setmanu.freespacewar.game.GameScreen"
             android:screenOrientation="fullSensor" />
         <activity
-            android:name=".gameOverScreen.GameOverScreen"
+            android:name="dev.setmanu.freespacewar.gameOverScreen.GameOverScreen"
             android:screenOrientation="fullSensor" />
     </application>
 </manifest>

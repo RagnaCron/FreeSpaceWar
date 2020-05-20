@@ -1,10 +1,6 @@
-package dev.setmanu.spacewar.game.sprites;
+package dev.setmanu.freespacewar.game.sprites;
 
-import android.content.Context;
 import android.graphics.Bitmap;
-import android.media.MediaPlayer;
-
-import dev.setmanu.spacewar.R;
 
 public final class ExplosionSprite extends BmpSprite {
 

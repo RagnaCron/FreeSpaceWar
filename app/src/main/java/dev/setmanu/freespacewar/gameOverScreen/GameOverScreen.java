@@ -1,4 +1,4 @@
-package dev.setmanu.spacewar.gameOverScreen;
+package dev.setmanu.freespacewar.gameOverScreen;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,9 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import dev.setmanu.spacewar.R;
-import dev.setmanu.spacewar.game.GameScreen;
-import dev.setmanu.spacewar.menuScreen.MenuScreen;
+import dev.setmanu.freespacewar.R;
+import dev.setmanu.freespacewar.game.GameScreen;
+import dev.setmanu.freespacewar.menuScreen.MenuScreen;
 
 public class GameOverScreen extends Activity implements View.OnClickListener {
 

@@ -1,12 +1,12 @@
-package dev.setmanu.spacewar.loadScreen;
+package dev.setmanu.freespacewar.loadScreen;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import dev.setmanu.spacewar.menuScreen.MenuScreen;
-import dev.setmanu.spacewar.R;
+import dev.setmanu.freespacewar.menuScreen.MenuScreen;
+import dev.setmanu.freespacewar.R;
 
 public final class LoadScreen extends Activity implements View.OnClickListener {
 

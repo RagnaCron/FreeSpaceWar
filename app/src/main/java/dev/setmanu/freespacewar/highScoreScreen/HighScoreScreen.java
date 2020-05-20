@@ -1,4 +1,4 @@
-package dev.setmanu.spacewar.highScoreScreen;
+package dev.setmanu.freespacewar.highScoreScreen;
 
 import android.app.Activity;
 import android.content.Context;
@@ -8,8 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import dev.setmanu.spacewar.R;
-import dev.setmanu.spacewar.menuScreen.MenuScreen;
+import dev.setmanu.freespacewar.R;
+import dev.setmanu.freespacewar.menuScreen.MenuScreen;
 
 public class HighScoreScreen extends Activity implements View.OnClickListener {
 
