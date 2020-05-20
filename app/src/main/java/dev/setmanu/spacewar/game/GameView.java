@@ -213,6 +213,7 @@ public final class GameView extends SurfaceView implements Runnable, View.OnClic
 
     public void resumeGame() {
         soundPool = GameSoundPool.getInstance(getContext());
+        soundPool.loadSoundSettings();
         isRunning = true;
         gameThread = new Thread(this);
         gameThread.start();
@@ -233,10 +234,6 @@ public final class GameView extends SurfaceView implements Runnable, View.OnClic
             Intent intent = new Intent(getContext(), GameOverScreen.class);
             getContext().startActivity(intent);
         }
-    }
-
-    public void destroyGame() {
-        soundPool.releaseSoundPool();
     }
 
     private void enemyExplode(EnemySprite e) {

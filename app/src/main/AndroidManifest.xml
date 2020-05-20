@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="dev.setmanu.spacewar">
-
     <application
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +8,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
         <activity
             android:name=".loadScreen.LoadScreen"
             android:screenOrientation="fullSensor">
@@ -20,17 +19,20 @@
         </activity>
         <activity
             android:name=".menuScreen.MenuScreen"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".highScoreScreen.HighScoreScreen"
+            android:screenOrientation="fullSensor" />
+        <activity
+            android:name=".settingsScreen.SettingsScreen"
             android:screenOrientation="fullSensor">
+
         </activity>
         <activity
             android:name=".game.GameScreen"
-            android:screenOrientation="fullSensor">
-        </activity>
-
+            android:screenOrientation="fullSensor" />
         <activity
             android:name=".gameOverScreen.GameOverScreen"
-            android:screenOrientation="fullSensor"/>
-
+            android:screenOrientation="fullSensor" />
     </application>
-
 </manifest>

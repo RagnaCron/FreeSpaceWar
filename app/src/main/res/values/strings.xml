@@ -20,5 +20,10 @@
     <string name="menu"><![CDATA[<- Menu ->]]></string>
     <string name="next_war"><![CDATA[<- Next War ->]]></string>
     <string name="high_score_table">HIGH_SCORE_TABLE</string>
+    <string name="background_sound">Background Sound</string>
+    <string name="shooting_sound">Shooting Sound</string>
+    <string name="explosion_sound">Explosion Sound</string>
+    <string name="back"><![CDATA[<- Back ->]]></string>
+    <string name="save"><![CDATA[<- Save ->]]></string>
 
 </resources>

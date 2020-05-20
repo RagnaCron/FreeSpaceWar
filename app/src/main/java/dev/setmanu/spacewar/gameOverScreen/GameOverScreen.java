@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import dev.setmanu.spacewar.R;
@@ -13,6 +14,9 @@ import dev.setmanu.spacewar.game.GameScreen;
 import dev.setmanu.spacewar.menuScreen.MenuScreen;
 
 public class GameOverScreen extends Activity implements View.OnClickListener {
+
+    private Button menuButton;
+    private Button warButton;
 
     private TextView bulletsShot;
     private TextView missedEnemies;
@@ -26,8 +30,10 @@ public class GameOverScreen extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.over_screen);
 
-        findViewById(R.id.over_menu_button).setOnClickListener(this);
-        findViewById(R.id.next_war_button).setOnClickListener(this);
+        menuButton = findViewById(R.id.over_menu_button);
+        warButton = findViewById(R.id.next_war_button);
+        menuButton.setOnClickListener(this);
+        warButton.setOnClickListener(this);
 
         bulletsShot = findViewById(R.id.shots_fired_score_label);
         missedEnemies = findViewById(R.id.missed_enemies_score_label);

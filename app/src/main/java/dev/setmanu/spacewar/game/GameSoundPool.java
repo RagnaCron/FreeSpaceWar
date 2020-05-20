@@ -1,6 +1,7 @@
 package dev.setmanu.spacewar.game;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.media.AudioAttributes;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
@@ -12,16 +13,24 @@ public final class GameSoundPool {
     private static GameSoundPool INSTANCE;
 
     private final static int MAXIMUM_STREAMS = 60;
-    private final static int PRIORITY_LOW = 1;
-    private final static int PRIORITY_HIGH = 2;
+    private final static int PRIORITY = 1;
     private final static float RATE = 1f;
     private final static int NO_LOOP = 0;
-    private final static float VOLUME = 0.3f;
+    private final static int INITIAL_VOLUME = 50;
 
     private int explosionSoundID;
     private int laserShotID;
     private boolean isSoundPoolLoaded;
     private SoundPool soundPool;
+
+    private boolean hasBackgroundSound;
+    private float backgroundVolume;
+    private boolean hasShootingSound;
+    private float shootingVolume;
+    private boolean hasExplosionSound;
+    private float explosionVolume;
+
+    SharedPreferences settings;
 
     private MediaPlayer backgroundSound;
 
@@ -32,6 +41,9 @@ public final class GameSoundPool {
     }
 
     private GameSoundPool(Context context) {
+        settings = context.getSharedPreferences("SOUND_SETTINGS", Context.MODE_PRIVATE);
+        loadSoundSettings();
+
         backgroundSound = MediaPlayer.create(context, R.raw.preparing_for_war);
         backgroundSound.setLooping(true);
 
@@ -46,32 +58,45 @@ public final class GameSoundPool {
 
         this.soundPool.setOnLoadCompleteListener((soundPool, sampleId, status) -> {
             isSoundPoolLoaded = true;
-            playBackGroundSound();
         });
 
-        explosionSoundID = soundPool.load(context, R.raw.explosion_1, PRIORITY_HIGH);
-        laserShotID = soundPool.load(context, R.raw.laser1, PRIORITY_HIGH);
+        explosionSoundID = soundPool.load(context, R.raw.explosion_1, PRIORITY);
+        laserShotID = soundPool.load(context, R.raw.laser1, PRIORITY);
+    }
+
+    public void loadSoundSettings() {
+        hasBackgroundSound = (settings.getBoolean("background_sound", true));
+        backgroundVolume = (settings.getInt("background_volume", INITIAL_VOLUME) / 100f);
+        hasShootingSound = (settings.getBoolean("shooting_sound", true));
+        shootingVolume = (settings.getInt("shooting_volume", INITIAL_VOLUME) / 100f);
+        hasExplosionSound = (settings.getBoolean("explosion_sound", true));
+        explosionVolume = (settings.getInt("explosion_volume", INITIAL_VOLUME) / 100f);
     }
 
     public void playBackGroundSound() {
-        if (!backgroundSound.isPlaying())
+        if (!backgroundSound.isPlaying() && hasBackgroundSound) {
+            backgroundSound.setVolume(backgroundVolume, backgroundVolume);
             backgroundSound.start();
+        }
     }
 
     public void stopBackGroundSound() {
-        backgroundSound.stop();
-        backgroundSound.prepareAsync();
+        if (backgroundSound.isPlaying()) {
+            backgroundSound.stop();
+            backgroundSound.prepareAsync();
+        }
+
     }
 
     public void playExplosionSound() {
-        if (isSoundPoolLoaded) {
-            soundPool.play(explosionSoundID, VOLUME, VOLUME, PRIORITY_LOW, NO_LOOP, RATE);
+        if (isSoundPoolLoaded && hasExplosionSound) {
+            soundPool.play(explosionSoundID, explosionVolume, explosionVolume, PRIORITY, NO_LOOP, RATE);
         }
     }
 
     public void playLaserShotSound() {
-        if (isSoundPoolLoaded) {
-            soundPool.play(laserShotID, VOLUME, VOLUME, PRIORITY_LOW, NO_LOOP, RATE);
+        if (isSoundPoolLoaded && hasShootingSound) {
+            soundPool.play(laserShotID, shootingVolume, shootingVolume, PRIORITY, NO_LOOP, RATE);
         }
     }
 
