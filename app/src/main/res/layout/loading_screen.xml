@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/load_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:gravity="center"
+    android:onClick="onClick"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".loadScreen.LoadScreen">
+
+    <TextView
+        android:id="@+id/space_war_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/rm_regular"
+        android:text="@string/space_war"
+        android:textColor="@color/colorFont"
+        android:textSize="36sp" />
+
+    <Button
+        android:id="@+id/game_is_loading_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:fontFamily="@font/rm_regular"
+        android:onClick="onClick"
+        android:text="@string/play_war"
+        android:textAlignment="center"
+        android:textColor="@color/colorFont"
+        android:textSize="16sp" />
+
+</LinearLayout>

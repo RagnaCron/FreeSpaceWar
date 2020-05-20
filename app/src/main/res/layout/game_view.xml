@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/button_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".game.GameView">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/empty_button1"
+                style="@android:style/Widget.DeviceDefault.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:theme="@style/GameButton"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/up_button"
+                style="@android:style/Widget.DeviceDefault.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/up_button"
+                android:theme="@style/GameButton" />
+
+            <Button
+                android:id="@+id/empty_button2"
+                style="@android:style/Widget.DeviceDefault.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:theme="@style/GameButton"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/left_button"
+                style="@android:style/Widget.DeviceDefault.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/left_button"
+                android:theme="@style/GameButton" />
+
+            <Button
+                android:id="@+id/empty_button5"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:theme="@style/GameButton"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/right_button"
+                style="@android:style/Widget.DeviceDefault.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/right_button"
+                android:theme="@style/GameButton" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/empty_button3"
+                style="@android:style/Widget.DeviceDefault.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:theme="@style/GameButton"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/down_button"
+                style="@android:style/Widget.DeviceDefault.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/down_button"
+                android:theme="@style/GameButton" />
+
+            <Button
+                android:id="@+id/empty_button4"
+                style="@android:style/Widget.DeviceDefault.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:theme="@style/GameButton"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/empty_button8"
+                style="@android:style/Widget.DeviceDefault.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:theme="@style/GameButton"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/empty_button6"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:theme="@style/GameButton"
+                android:visibility="invisible"
+                style="@android:style/Widget.DeviceDefault.Button.Borderless" />
+
+            <Button
+                android:id="@+id/empty_button9"
+                style="@android:style/Widget.DeviceDefault.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:theme="@style/GameButton"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/empty_button13"
+                style="@android:style/Widget.DeviceDefault.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:theme="@style/GameButton"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/a_button"
+                style="@android:style/Widget.DeviceDefault.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/a_button"
+                android:theme="@style/GameButton" />
+
+            <Button
+                android:id="@+id/empty_button11"
+                style="@android:style/Widget.DeviceDefault.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:theme="@style/GameButton"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/empty_button14"
+                style="@android:style/Widget.DeviceDefault.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:theme="@style/GameButton"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/empty_button12"
+                style="@android:style/Widget.DeviceDefault.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:theme="@style/GameButton"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/empty_button10"
+                style="@android:style/Widget.DeviceDefault.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:theme="@style/GameButton"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

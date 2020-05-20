@@ -1,0 +1,2 @@
+rootProject.name='SpaceWar'
+include ':app'
